@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { FolderOpenDot } from "lucide-react";
 import Products from "@/components/Products";
 import Header from "@/components/Header";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
@@ -37,15 +38,15 @@ export default function HeroSection() {
 
         {/* CTA Button */}
         <div className="mt-8">
-          <button
+          <Link href="/admin"
             className="bg-red-600 hover:bg-red-700 text-white  shadow-lg text-lg px-12 py-2 flex space-x-2 rounded-sm
         
         items-center cursor-pointer
         "
           >
             <FolderOpenDot />
-            <p>See About Us</p>
-          </button>
+            <p>dashboard</p>
+          </Link>
         </div>
       </section>
 
