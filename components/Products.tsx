@@ -2,6 +2,19 @@ import { api } from '@/convex/_generated/api';
 import {  useQuery } from 'convex/react'
 import React from 'react'
 
+export interface Product {
+  _id: string; // Convex automatically generates an ID field
+  _creationTime: number; // Convex adds this too
+  categoryId: string;
+  name: string;
+  description: string;
+  price: number;
+  imageUrl?: string;
+  isAvailable: boolean;
+  createdAt: number;
+}
+
+
 function Products() {
 const products = useQuery(api.Products.getProducts);
 
@@ -21,7 +34,7 @@ if (products === undefined) {
       <div className="max-w-5xl mx-auto p-6">
       <h1 className="text-2xl font-bold mb-4">Our Menu</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {products.map((product: any) => (
+        {products.map((product: Product) => (
           <div
             key={product._id}
             className="p-4 bg-white rounded-2xl shadow-md border hover:shadow-lg transition"
