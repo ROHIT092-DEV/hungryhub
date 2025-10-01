@@ -4,10 +4,13 @@
 import { Badge } from "@/components/ui/badge";
 import { FolderOpenDot } from "lucide-react";
 import Products from "@/components/Products";
+import Header from "@/components/Header";
 
 export default function HeroSection() {
   return (
     <>
+
+    <Header />
       <section className="relative flex flex-col items-center justify-center text-center px-6 py-20 bg-gradient-to-b from-blue-100 via-purple-100 to-pink-100">
         {/* Badge */}
         <Badge className="mb-4 bg-red-100 text-red-700 hover:bg-red-200">

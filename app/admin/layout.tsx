@@ -1,4 +1,5 @@
-import SideBar from "@/components/SideBar";
+import AdminHeader from "@/components/((admin))/Header";
+
 
 export default function AdminLayout({
   children,
@@ -6,9 +7,9 @@ export default function AdminLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className=" min-h-screen grid grid-cols-6 max-w-7xl mx-auto">
-      <SideBar />
-      <div className="col-span-5">
+    <div className="">
+      <AdminHeader />
+      <div className="">
         {children}
       </div>
     </div>
