@@ -1,7 +1,7 @@
 "use client";
 
 import { Authenticated, AuthLoading, Unauthenticated } from "convex/react";
-import { LayoutDashboard, Loader2, LogIn } from "lucide-react";
+import {  Loader2, LogIn, ShoppingBag } from "lucide-react";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { SignInButton, UserButton } from "@clerk/clerk-react";
@@ -30,17 +30,17 @@ function Header() {
         </div>
 
         {/* Brand Name */}
-        <span className="text-2xl font-extrabold bg-gradient-to-r from-red-600 via-orange-500 to-yellow-500 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
+        <span className="text-lg md:text-2xl font-extrabold bg-gradient-to-r from-red-600 via-orange-500 to-yellow-500 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
           Hungry-Hub
         </span>
       </Link>
 
       {/* dashboard and Profile*/}
 
-      <div className="flex space-x-2 items-center">
+      <div className="flex space-x-1 items-center">
         <Link href={"/dashboard"} className="flex space-x-1 items-center">
-          <LayoutDashboard size={20} />
-          <p>Dashboad</p>
+          <ShoppingBag size={18}/>
+      
         </Link>
 
         {/* User Profile */}
